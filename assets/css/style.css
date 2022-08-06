@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+/*General Styling*/
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+main{
+    width: 100%;
+    background-color: #E8F0F2;
+}
+footer{
+    width: 100%;
+    background-color: #053742;
+}
+.flex-container-column{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+}
+
+.flex-container-row{
+    display: flex;
+}
+
+/*Navigation Styling*/
+
+nav{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: #053742;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+nav li{
+    display: inline;
+    margin-left: 20px;
+    list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #E8F0F2;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.favicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 40%;
+}
+.favicon-intended{
+    color: #E8F0F2;
+}
+.content-navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 60%;
+    text-align: center;
+}
+.dropdown{
+    display: none;
+}
+
+/*Main Content Styling*/
+
+.subtitle{
+    padding: 0;
+    text-align: center;
+}
+
+/*Tagline Content*/
+
+.content-tagline{
+    position: relative;
+}
+.img-tagline{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: bottom right;
+}
+.img-shadow-effect{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    border: none;
+    box-shadow: 20px 20px 10000px black inset;
+}
+.container-text-tagline{
+    position: absolute;
+    z-index: 1;
+    left: 5vw;
+    top: 25vw;
+    margin-right: 5vw;
+}
+.text-tagline{
+    margin: 0;
+    color: #E8F0F2;
+    font-size: 50px;
+}
+.tagline-sub{
+    top: 24vw;
+    font-size: 20px;
+}
+
+/*Value Content*/
+
+#content-value{
+    margin: 0 auto;
+    max-width: 70%;
+    color: #053742;
+}
+.symbol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-basis: 25%;
+}
+.symbol img{
+    max-width: 200px;
+}
+.symbol figcaption{
+    font-size: 22px;
+    font-weight: bold;
+}
+.text{
+    padding: 10px;
+    flex-basis: 75%;
+    text-align: left;
+}
+
+/*Destination Content*/
+
+#content-destination{
+    margin: 0 auto;
+    background-color: #E8F0F2;
+    color: #053742;
+}
+.card-destination{
+    position: relative;
+    padding: 0;
+    flex-basis: 25%;
+}
+.img-destination{
+    width: 90%;
+    min-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.button-details{
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 5%;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 12vw;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: #053742;
+}
+.button-details:hover{
+    background-color: #053742;
+    color: #E8F0F2;
+}
+#container-popup{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.content-popup{
+    position: relative;
+    margin: 5vw auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 70%;
+    background-color: #fefefe;
+}
+.image-popup{
+    width: 100%;
+    max-height: 15vw;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.text-popup{
+    margin: 10px auto;
+    padding: 10px;
+    padding-bottom: 60px;
+    width: 96%;
+    font-size: 18px;
+    font-weight: 500;
+}
+.button-close-popup{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 30px;
+    background-color: #E8F0F2;
+    color: #053742;
+}
+.button-order-popup{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #E8F0F2;
+    color: #053742;
+}
+.button-close-popup:hover,
+.button-close-popup:focus, 
+.button-order-popup:hover,
+.button-order-popup:focus {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #053742;
+    color: #E8F0F2;
+}
+
+/*Addtitional Information Content*/
+
+#content-additional{
+    margin: 0 auto;
+    padding: 20px;
+    color: #E8F0F2;
+    overflow: hidden;
+}
+.author-bio{
+    flex-basis: 40%;
+}
+.author-bio img{
+    width: 150px;
+    border: 0;
+    border-radius: 20px;
+}
+.information{
+    flex-basis: 30%;
+    margin: 0;
+    text-align: left;
+}
+.information ul{
+    margin: 0;
+    padding: 0;
+}
+.information li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.information a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #E8F0F2;
+}
+.information a:hover{
+    text-decoration: underline;
+}
+
+/*Media Query Styling*/
+
+@media screen and (max-width: 760px) {
+    /*Navigation Styling*/
+
+    .favicon{
+        flex-basis: 85%;
+    }
+    .content-navigation{
+        display: none;
+    }
+    .dropdown{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 15%;
+    }
+    .dropdown-content{
+        padding: 20px 6vw;
+        text-align: right;
+    }
+    .button-dropdown{
+        font-size: 20px;    
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    /*Main Content Styling*/
+    /*Tagline Content*/
+
+    .img-tagline{
+        object-position: center bottom;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    /*Main Content Styling*/
+    /*Value Content*/
+
+    #content-value{
+        max-width: 90%;
+    }
+    .symbol{
+        flex-basis: 50%;
+        margin: auto;
+    }
+    .text{
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    /*Destination Content*/
+
+    #content-destination .flex-container-row{
+        display: block;
+    }
+    .img-destination{
+        min-height: 300px;
+    }
+}
